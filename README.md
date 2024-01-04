@@ -1,101 +1,123 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/uO3FBJhb)
-The directory structure is very simple.
-All we have is one folder. This folder contains everything needed to access all the pages we've made, like the stylesheets, the html files and the images.
-To open our website, all you need to do is to open the file "index.html" in the folder "Project" which will take you to our home page.
-We have included, as we have been instructed to, a home page, an about page and an artists page.
-Each of the five artists we've included has an albums page, which contains 5 of their albums. Each of these albums pages contain links to 5 other pages that contain the artists' songs from the albums (they are links to the pages we've made).
-This means that we have 3 main pages, 25 songs pages and 5 albums pages.
-3 stylesheets are also part of the directory. So are images, ofcourse.
-This is how the directory/folder looks:
 
+In order to run the website, you'll need to use the terminal and type in ./app.py
+
+Our project has the following parts:
 ```
-Project
-├── About.html
-├── albumsheet.css
-├── albums.html
-├── Ananya.jpeg
-├── artist.html
-├── artiststyle.css
-├── background.jpeg
-├── back.jpg
-├── bg.jpg
-├── bgsongs.jpg
-├── blackpink.jpg
-├── bornpi.jpeg
-├── bornpsongs.html
-├── bpal.html
-├── bp.jpeg
-├── btsal.html
-├── bts.avif
-├── bts.jpeg
-├── BTSloveyourself.jpeg
-├── BTSloveyourself.webp
-├── checkmate.html
-├── checkmate.jpg
-├── cheshire.html
-├── cheshire.jpeg
-├── crazy.jpeg
-├── dandwsongs.html
-├── dark.jpg
-├── fearless.html
-├── fearless.jpeg
-├── guesswho.html
-├── index.html
-├── insta.jpeg
-├── ITZME.html
-├── itzme.jpg
-├── itzyal.html
-├── ITZY.jpeg
-├── kill.jpeg
-├── killsongs.html
-├── loc.html
-├── logo.png
-├── lose.jpg
-├── losesongs.html
-├── lover.html
-├── lover.jpeg
-├── loveyourself.jpeg
-├── lysongs.html
-├── map.jpeg
-├── mapsongs.html
-├── midnights.html
-├── midnights.jpeg
-├── Nishita.jpeg
-├── notshy.jpeg
-├── oned.jpeg
-├── picofus.jpeg
-├── rain.jpeg
-├── rainsongs.html
-├── rare.jpg
-├── raresongs.html
+-> four python files for creating and managing the database, and for running the website.
+-> a folder named templates which contains all our html files
+-> a folder named static that contains the javascript, css files and images
+-> a folder named instance that contains the database
+```
+```.
+├── app.py
+├── Assumptions.md
+├── extensions.py
+├── instance
+│   └── playlist.db
+├── models.py
+├── p3.py
 ├── README.md
-├── red.html
-├── red.jpeg
-├── rep.jpg
-├── reputation.html
-├── revalacion.html
-├── Revelación.jpeg
-├── rev.html
-├── rev.jpg
-├── salena.jpg
-├── selal.html
-├── selena.jpeg
-├── solid.jpeg
-├── songsstyle.css
-├── soul.png
-├── squareone.jpg
-├── squareonesongs.html
-├── squaresongs.html
-├── squareup.jpeg
-├── sun.jpg
-├── sunsongs.html
-├── tayloral.html
-├── Taylor.jpeg
-├── thealbum.jpeg
-├── thesongs.html
-├── who.jpg
-├── wingssong.jpg
-├── wingssongs.html
-├── young.jpg
-└── youngsongs.html
+├── static
+│   ├── 6077505.jpg
+│   ├── about.jpg
+│   ├── albumsheet.css
+│   ├── Ananya.jpeg
+│   ├── artiststyle.css
+│   ├── background.jpeg
+│   ├── back.jpg
+│   ├── bg.jpg
+│   ├── bgsongs.jpg
+│   ├── blackpink.jpg
+│   ├── bornpi.jpeg
+│   ├── bp.jpeg
+│   ├── bts.avif
+│   ├── bts.jpeg
+│   ├── BTSloveyourself.jpeg
+│   ├── checkmate.jpg
+│   ├── cheshire.jpeg
+│   ├── crazy.jpeg
+│   ├── dark.jpg
+│   ├── fearless.jpeg
+│   ├── indexjava.js
+│   ├── itzme.jpg
+│   ├── ITZY.jpeg
+│   ├── kill.jpeg
+│   ├── logo.png
+│   ├── lover.jpeg
+│   ├── loveyourself.jpeg
+│   ├── map.jpeg
+│   ├── midnights.jpeg
+│   ├── naveffect.js
+│   ├── Nishita.jpeg
+│   ├── notshy.jpeg
+│   ├── picofus.jpeg
+│   ├── playlist.css
+│   ├── playlist.jpeg
+│   ├── playlist.js
+│   ├── playlist.png
+│   ├── rain.jpeg
+│   ├── rare.jpg
+│   ├── red.jpeg
+│   ├── rep.jpg
+│   ├── Revelación.jpeg
+│   ├── rev.jpg
+│   ├── salena.jpg
+│   ├── search.css
+│   ├── searchnew.js
+│   ├── selena.jpeg
+│   ├── solid.jpeg
+│   ├── songsstyle.css
+│   ├── soul.png
+│   ├── spotlightback.jpg
+│   ├── spotlight.jpg
+│   ├── spotlight.js
+│   ├── squareone.jpg
+│   ├── squareup.jpeg
+│   ├── sun.jpg
+│   ├── Taylor.jpeg
+│   ├── thealbum.jpeg
+│   ├── theal.jpeg
+│   ├── who.jpg
+│   ├── wingssong.jpg
+│   └── young.jpg
+└── templates
+    ├── About.html
+    ├── artist.html
+    ├── bornpsongs.html
+    ├── bpal.html
+    ├── btsal.html
+    ├── checkmate.html
+    ├── cheshire.html
+    ├── dandwsongs.html
+    ├── fearless.html
+    ├── guesswho.html
+    ├── index.html
+    ├── ITZME.html
+    ├── itzyal.html
+    ├── killsongs.html
+    ├── loc.html
+    ├── lover.html
+    ├── lysongs.html
+    ├── mapsongs.html
+    ├── midnights.html
+    ├── playlist.html
+    ├── rainsongs.html
+    ├── raresongs.html
+    ├── red.html
+    ├── reputation.html
+    ├── revalacion.html
+    ├── rev.html
+    ├── searchpage.html
+    ├── selal.html
+    ├── spotlight.html
+    ├── squareonesongs.html
+    ├── squaresongs.html
+    ├── sunsongs.html
+    ├── tayloral.html
+    ├── thesongs.html
+    ├── wingssongs.html
+    └── youngsongs.html
+
+3 directories, 105 files
 ```

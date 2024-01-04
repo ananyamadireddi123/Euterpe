@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        header {
+            height: 8vh;
+            width: 100%;
+            background-color: darkorchid;
+            position: sticky;
+            top:0;
+            z-index: 1000;
+        }
+
+        footer {
+        text-align: center;
+        padding: 3px;
+        background-color: pink;
+        color: black;
+        }
+
+        header img {
+            height: 100%;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-style: normal;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 2%;
+            font-size: 3ch;
+            text-align: center;
+            color: green;
+            float: right;
+            justify-content: center;
+            align-items:center;
+        }
+
+        li {
+            display: inline;
+            margin: 25px;
+            justify-content: center;
+            align-items:center;
+        }
+
+
+        body {
+            background-image: url('../static/back.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: aliceblue;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            align-self: auto;
+           
+        }
+
+
+        .column1 {
+            display: table-cell;
+             margin: 1%;
+             float:left; 
+        }
+
+        img:hover 
+        {
+            transform: scale(1.1);
+            transition: 0.4s ease;
+        }
+
+        .round 
+        {
+            border-radius: 20px;
+        }
+
+        .column2 
+        {
+            display: table-cell;
+            margin: 1%;
+            float: left;
+            
+        }
+
+        .top {
+            display: table-row;
+            margin-right: 1%;
+        }
+
+
+        .songs ul {
+            color: aqua;
+            float: left;
+            text-align: left;
+        }
+
+        .home {
+            display: table;
+            margin: 2%
+        }
+
+        .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        }
+
+        .container:hover .middle {
+        opacity: 1;
+        background-color: brown;
+        text-align: center;
+        }
+
+        .text {
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 25px;
+            text-align: center;
+            top:50%;
+            left:50%;
+            opacity: 0.5;
+            background-color:bisque ;
+            background-position: 100%;
+        }
+
+        .container {
+        position: relative;
+        width: 50%;
+        }
+
+    </style>
+  
+</head>
+
+<body>
+
+    <header>
+        <a href="{{ url_for('about') }}"><img src="{{ url_for('static', filename='logo.png') }}"></a>
+        <ul>
+            <li><strong><a href="{{ url_for('index') }}">Home</a></strong></li>
+            <li><a href="{{ url_for('artists') }}">Artists</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('searchpage') }}">New Search</a></li>
+            <li><a href="{{ url_for('spotlight') }}">Artist SpotLight</a></li>
+            <li><a href="{{ url_for('playlist') }}">My Playlist</a></li>
+        </ul>
+    </header>
+
+    <script src="{{ url_for('static', filename='naveffect.js') }}"></script>
+
+    <br>
+    <br>
+
+    <div class="home">
+        <h2 id="first"></h2>
+        <div class="top">
+
+            <div class="column1">
+                <a href="{{ url_for('btsal') }}" style="color:rgb(137, 137, 218)">
+                    <h3> BTS </h3>
+                </a>
+
+
+                <a href="{{ url_for('btsal') }}">
+                    <div class="container">
+                        <img src="../static/bts.avif" class="round" height="250px" width="250px">
+                        <div class="middle">
+                            <div class="text">
+                                BTS
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="column1">
+
+                <a href="{{ url_for('bpal') }}" style="color:rgb(137, 137, 218)">
+                    <h3> BLACK PINK </h3>
+                </a>
+
+                <a href="{{ url_for('bpal') }}">
+                    <div class="container">
+                        <img src="../static/blackpink.jpg" class="round" height="250px" width="250px">
+                        <div class="middle">
+                            <div class="text">
+                                BlackPink
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="column1">
+
+                <a href="{{ url_for('selal') }}" style="color:rgb(137, 137, 218)">
+                    <h3> SELENA GOMEZ </h3>
+                </a>
+
+                <a href="{{ url_for('selal') }}">
+                    <div class="container">
+                        <img src="../static/salena.jpg" class="round" height="250px" width="250px">
+                        <div class="middle">
+                            <div class="text">
+                                Selena Gomez
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <p>
+
+        <h2> TOP ALBUMS </h2>
+
+        </p>
+
+        <div class="top">
+
+
+            <div class="column2">
+                <a href="{{ url_for('lysongs') }}" style="color:rgb(137, 137, 218)">
+                    <h3> LOVE YOURSELF </h3>
+                </a>
+
+                <a href="{{ url_for('lysongs') }}">
+                    <div class="container">
+                        <img src="../static/BTSloveyourself.jpeg" height="250px" width="250px" class="round">
+                        <div class="middle">
+                            <div class="text">
+                                Love Yourself
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="column2">
+
+                <a href="{{ url_for('bornpsongs') }}" style="color:rgb(137, 137, 218)">
+                    <h3> BORN PINK </h3>
+                </a>
+
+
+                <a href="{{ url_for('bornpsongs') }}">
+                    <div class="container">
+                        <img src="../static/bornpi.jpeg" height="250px" width="250px" class="round">
+                        <div class="middle">
+                            <div class="text">
+                                Born Pink
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="column2">
+
+                <a href="{{ url_for('raresongs') }}" style="color:rgb(137, 137, 218)">
+                    <h3> RARE </h3>
+                </a>
+
+                <a href="{{ url_for('raresongs') }}">
+                    <div class="container">
+                        <img src="../static/rare.jpg" width="250px" height="250px" class="round">
+                        <div class="middle">
+                            <div class="text">
+                                Rare
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <p>
+        <h2> TOP SONGS </h2>
+        </p>
+        <div class="songs">
+            <ul>
+                <li>
+                     FAKE LOVE - by BTS
+                </li>
+                <br>
+                <li>
+                    ICE CREAM - by BLACK PINK
+                </li>
+                <br>
+                <li>
+                    WHO SAYS - by SELENA GOMEZ
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>Author: Ananya and Nishita<br>
+        <a href="mailto:madireddy.ananya@students.iiit.ac.in">madireddy.ananya@students.iiit.ac.in</a><br>
+        <a href="mailto:nishita.kannan@students.iiit.ac.in">nishita.kannan@students.iiit.ac.in</a><br>
+        &copy Euterpe</p>
+        <a href="{{ url_for('about') }}">About</a>
+        <br>
+    </footer>
+    <script src="../static/indexjava.js"></script>
+</body>
+</html>

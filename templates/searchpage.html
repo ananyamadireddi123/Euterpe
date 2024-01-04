@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Page</title>
+    <link rel="stylesheet" href="../static/search.css">
+    <style>
+        body {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+             min-height: 100vh;
+        }
+        
+        main {
+            flex:1;
+        }
+
+        form {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 25px 25px 25px 25px;
+            border: 1px solid #ccc;
+            width: 600px;
+            margin-bottom: 50px;
+        }
+
+        button[type="submit"] {
+            padding: 10px;
+            background-color: #008CBA;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px 5px 5px 5px;
+            cursor: pointer;
+            margin-bottom: 50px;
+            margin-left: 30px;
+        }
+
+        #max-duration-input {
+            margin-bottom: 50px;
+            padding: 10px;
+        }
+
+        label {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 50px;
+            font-size: 20px;
+            color: cyan;
+        }
+
+        #explicit-input {
+            margin-bottom: 50px;
+            padding: 10px;
+        }
+
+        header {
+            height: 8vh;
+            width: 100%;
+            background-color: darkorchid;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            height: 100%;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-style: normal;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 2%;
+            font-size: 3ch;
+            text-align: center;
+            color: green;
+            float: right;
+            justify-content: center;
+            align-items: center;
+        }
+
+        li {
+            display: inline;
+            margin: 25px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body {
+            background-image: url('../static/6077505.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: aliceblue;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            align-self: auto;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            transition: 0.4s ease;
+        }
+
+        img {
+            float: left;
+        }
+
+        footer {
+        text-align: center;
+        padding: 3px;
+        background-color: pink;
+        color: black;
+        flex-shrink: 0;
+        }
+    </style>
+    <script src="../static/searchnew.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <a href="{{ url_for('About') }}"><img src="../static/logo.png"></a>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('artists') }}">Artists</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><strong><a href="{{ url_for('searchpage') }}">New Search</a></strong></li>
+            <li><a href="{{ url_for('spotlight') }}">Artist SpotLight</a></li>
+            <li><a href="{{ url_for('playlist') }}">My Playlist</a></li>
+        </ul>
+
+        <script src="{{ url_for('static', filename='naveffect.js') }}"></script>
+    </header>
+
+    <br>
+    <br>
+    <main>
+    <h1>NEW SEARCH</h1>
+    <h2>Welcome to New Search. You can enter your search item in the box below.</h2>
+    <form id="search-form">
+        <input type="text" class="searchp" name="SEARCH" placeholder="Enter a tune to search thorugh iTunes">
+
+        <label for="max-duration-input"> Max Duration (min): </label>
+        <input type="number" id="max-duration-input" name="max-duration">
+
+        <label for="explicit-input"> Explicit: </label>
+        <select id="explicit-input" name="explicit">
+            <option value="">All</option>
+            <option value="explicit">Explicit</option>
+            <option value="notExplicit">Not Explicit</option>
+        </select>
+
+        <button type="submit">Search</button>
+    </form>
+    <div id="results">
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    </main>
+
+     
+
+    <footer>
+        <p>Author: Ananya and Nishita<br>
+        <a href="mailto:madireddy.ananya@students.iiit.ac.in">madireddy.ananya@students.iiit.ac.in</a><br>
+        <a href="mailto:nishita.kannan@students.iiit.ac.in">nishita.kannan@students.iiit.ac.in</a><br>
+        &copy Euterpe</p>
+        <a href="{{ url_for('about') }}">About</a>
+        <br>
+    </footer>
+
+</body>
+
+</html>

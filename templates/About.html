@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        header {
+            height: 8vh;
+            width: 100%;
+            background-color: darkorchid;
+            position: sticky;
+            top: 0;
+        }
+
+        header img {
+            height: 100%;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-style: normal;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 2%;
+
+            font-size: 3ch;
+            text-align: center;
+            color: green;
+            float: right;
+
+        }
+
+        li {
+            display: inline;
+            margin: 20px;
+        }
+
+        body {
+            background-image: url('../static/solid.jpeg');
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: aliceblue;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        .songs {
+            text-align: center;
+        }
+        table{
+            margin-top: 2%;
+            margin-bottom: 7%;
+            text-align: center;
+        }
+
+
+        th {
+            text-align: center;
+            display:flex;
+            flex-direction: column;
+
+            border: 1px solid white;
+            border-radius: 5px;
+            border-width: 5px;
+            width: 100%;
+            color: aquamarine;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    
+    <header>
+        <a href="{{ url_for('about') }}"><img src="{{ url_for('static', filename='logo.png') }}"></a>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('artists') }}">Artists</a></li>
+            <li><strong><a href="{{ url_for('about') }}">About</a></strong></li>
+            <li><a href="{{ url_for('searchpage') }}">New Search</a></li>
+            <li><a href="{{ url_for('spotlight') }}">Artist SpotLight</a></li>
+            <li><a href="{{ url_for('playlist') }}">My Playlist</a></li>
+        </ul>
+    </header>
+
+    <script src="{{ url_for('static', filename='naveffect.js') }}"></script>
+    <style>
+        .imp {
+            text-align: center;
+            font-size: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+
+        <style>
+            .mid{
+                width: 50%;
+                font-size: 25px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+
+         <table class="mid">
+            <tr>
+                <td>Welcome to Euterpe, a music-focused website created by Ananya and Nishita, two dedicated CSE students at IIIT-H. 
+                    Our goal is to provide a platform that showcases the top artists and their most popular songs based on reviews, 
+                    creating an IMDb equivalent for music enthusiasts.
+                </td>
+            </tr>
+        </table>
+
+        <table class="mid">
+            <tr>
+                <td>                    
+                    <img src="../static/picofus.jpeg" width="500">
+                </td>
+            </tr>
+        </table>
+
+        <table class="mid">
+            <tr>
+                <td>As a team of two, we have put a significant amount of effort into designing and developing this website. 
+                    Our passion for music and commitment to creating an exceptional user experience has driven us to create a site 
+                    that not only looks beautiful but also provides valuable insights into the music industry.
+                </td>
+            </tr>
+        </table>
+
+        <table class="mid">
+            <tr>
+                <td>
+                    <img src="../static/Nishita.jpeg" width="250">
+                </td>
+            </tr>
+        </table>
+
+        <table class="mid">
+            <tr>
+                <td> Allow us to introduce ourselves. Ananya Madireddy, an 18-year-old embodiment of determination and genuine kindness, 
+                    navigates through challenges with grace and enthusiasm. motivating those around her to embrace a more upbeat perspective on life.
+                    Nishita Kannan, also 18 years old, complements Ananya's strengths with her organizational skills and 
+                    passion for engaging conversations. Her attention to detail guarantees our site's content is 
+                    beautifully structured, while her amiable nature makes collaborating with her a pleasure.
+                </td>
+            </tr>
+        </table>
+
+        <table class="mid">
+            <tr>
+                <td>                    
+                    <img src="../static/Ananya.jpeg" width="250">
+                </td>
+            </tr>
+        </table>
+
+        <table class="mid">
+            <tr>
+                <td>We hope you enjoy exploring Euterpe and discovering new music. As we continue to develop this project, we will update 
+                    our About page with new information, so stay tuned!
+                </td>
+            </tr>
+        </table>
+        <br>
+    </p>
+
+    <style>
+        footer {
+        text-align: center;
+        padding: 3px;
+        background-color: pink;
+        color: black;
+        }
+    </style>
+
+    <footer>
+        <p>Author: Ananya and Nishita<br>
+        <a href="mailto:madireddy.ananya@students.iiit.ac.in">madireddy.ananya@students.iiit.ac.in</a><br>
+        <a href="mailto:nishita.kannan@students.iiit.ac.in">nishita.kannan@students.iiit.ac.in</a><br>
+        &copy Euterpe</p>
+        <a href="{{ url_for('about') }}">About</a>
+        <br>
+    </footer>
+
+</body>
+
+</html>

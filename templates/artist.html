@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="../static/artiststyle.css">
+    </head>
+     
+    <body align="center">
+        <header>
+            <a href="{{ url_for('About') }}"><img src="../static/logo.png"></a>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><strong><a style="color:pink;" href="{{ url_for('artists') }}">Artists</a></strong></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('searchpage') }}">New Search</a></li>
+                <li><a href="{{ url_for('spotlight') }}">Artist SpotLight</a></li>
+                <li><a href="{{ url_for('playlist') }}">My Playlist</a></li>
+            </ul>
+        </header>
+    
+        <script src="{{ url_for('static', filename='naveffect.js') }}"></script>
+        <link rel="stylesheet" href="../static/artiststyle.css">
+        <table class="center">
+            <tr>
+                <td><a href="{{ url_for('btsal') }}">
+                    <img src="../static/bts.jpeg"
+                    style="width:300px;height:300px;" class="round">
+                </a>
+                <td class="align-left"><a href="{{ url_for('btsal') }}">BTS</a></td>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="{{ url_for('selal') }}">
+                    <img src="../static/selena.jpeg"
+                    style="width:300px;height:300px;" class="round">
+                </a>
+                <td class="align-left"><a href="{{ url_for('selal') }}">Selena Gomez</a></td>
+            </td>
+            </tr>
+            <tr>
+                <td><a href="{{ url_for('itzyal') }}">
+                    <img src="../static/ITZY.jpeg"
+                    style="width:300px;height:300px;" class="round">
+                </a>
+                <td class="align-left"><a href="{{ url_for('itzyal') }}">ITZY</a></td>
+            </td>
+            </tr>
+            <tr>
+                <td><a href="{{ url_for('tayloral') }}">
+                    <img src="../static/Taylor.jpeg"
+                    style="width:300px;height:300px;" class="round">
+                </a>
+                <td class="align-left"><a href="{{ url_for('tayloral') }}">Taylor Swift</a></td>
+            </td>
+            </tr>
+            <tr>
+                <td><a href="{{ url_for('bpal') }}">
+                    <img src="../static/bp.jpeg"
+                    style="width:300px;height:300px;" class="round">
+                </a>
+                <td class="align-left"><a href="{{ url_for('bpal') }}">BlackPink</a></td>
+            </td>
+            </tr>
+        </table>
+
+        <style>
+            footer {
+            text-align: center;
+            padding: 3px;
+            background-color: pink;
+            color: black;
+            }
+        </style>
+    
+        <footer>
+            <p>Author: Ananya and Nishita<br>
+            <a href="mailto:madireddy.ananya@students.iiit.ac.in">madireddy.ananya@students.iiit.ac.in</a><br>
+            <a href="mailto:nishita.kannan@students.iiit.ac.in">nishita.kannan@students.iiit.ac.in</a><br>
+            &copy Euterpe</p>
+            <a href="{{ url_for('about') }}">About</a>
+            <br>
+        </footer>
+
+    </body>
+
+</html>

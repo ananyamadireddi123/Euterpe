@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <head>
+        <link rel="stylesheet" href="../static/songsstyle.css">
+    </head>
+</head>
+
+<body>
+
+    <header>
+        <a href="{{ url_for('About') }}"><img src="../static/logo.png"></a>
+        <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('artists') }}">Artists</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('searchpage') }}">New Search</a></li>
+        <li><a href="{{ url_for('spotlight') }}">Artist SpotLight</a></li>
+        <li><a href="{{ url_for('playlist') }}">My Playlist</a></li>
+        </ul>
+        </header>
+        
+        <script src="{{ url_for('static', filename='naveffect.js') }}"></script>        
+    <br>
+    <br>
+
+    <div class="songs">
+
+        <img src="../static/kill.jpeg" width="500px" height="500px" margin="2%">
+
+        <table align="center">
+            <th>
+                <h2>
+                    <pre> KILL THIS LOVE                 Duration : 3:55   <button class="add-to-playlist">Add to Playlist</button></pre>
+                </h2>
+
+            </th>
+            <th>
+                <h2>
+                    <pre> KICK IT                         Duration : 3:59   <button class="add-to-playlist">Add to Playlist</button></pre>
+                </h2>
+
+            </th>
+            <th>
+                <h2>
+                    <pre> HOPE NOT                        Duration : 3:16   <button class="add-to-playlist">Add to Playlist</button></pre>
+                </h2>
+
+            </th>
+            <th>
+                <h2>
+                    <pre> DDU-DU-DDU-DU                   Duration : 4:00   <button class="add-to-playlist">Add to Playlist</button></pre>
+                </h2>
+            </th>
+            <th>
+                <h2>
+                    <pre> DONT KNOW WHAT TO DO           Duration : 3:53   <button class="add-to-playlist">Add to Playlist</button></pre>
+                </h2>
+
+            </th>
+        </table>
+        <form id="hiddenForm" action="{{ url_for('add_song') }}" method="post" style="display: none;">
+            <input type="hidden" id="titleInput" name="title">
+            <input type="hidden" value="killsongs" name="flename">
+        </form>
+
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>Author: Ananya and Nishita<br>
+        <a href="mailto:madireddy.ananya@students.iiit.ac.in">madireddy.ananya@students.iiit.ac.in</a><br>
+        <a href="mailto:nishita.kannan@students.iiit.ac.in">nishita.kannan@students.iiit.ac.in</a><br>
+        &copy Euterpe</p>
+        <a href="{{ url_for('about') }}">About</a>
+        <br>
+        </footer>
+        <script src="{{ url_for('static', filename='playlist.js') }}"></script>
+</body>
+</html>

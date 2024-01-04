@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            header {
+                height: 8vh;
+                width: 100%;
+                background-color: darkorchid;
+                position: sticky;
+                top:0;
+                z-index: 1000;
+            }
+
+            table {
+                margin-top: 2%;
+                margin-bottom: 7%;
+                text-align: center;
+            }
+  
+            header img {
+                height: 100%;
+            }
+    
+            a {
+                color: white;
+                text-decoration: none;
+                font-style: normal;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+    
+            ul {
+                list-style-type: none;
+                margin: 2%;
+                font-size: 3ch;
+                text-align: center;
+                color: green;
+                float: right;
+                justify-content: center;
+                align-items:center;
+            }
+    
+            li {
+                display: inline;
+                margin: 25px;
+                justify-content: center;
+                align-items:center;
+            }
+    
+            body {
+                background-image: url('../static/spotlightback.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: aliceblue;
+                background-attachment: fixed;
+                margin: 0;
+                padding: 0;
+                align-self: auto;
+            }
+        
+            .round 
+            {
+                border-radius: 20px;
+            }
+
+            .middle {
+                transition: .5s ease;
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            td {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid white;
+                border-width: 2px;
+                width: 100%;
+                color: black;
+            }
+
+            .para{
+                text-align: center;
+                color: black;
+            }
+
+            .para1{
+                text-align: center;
+                color: rgb(124, 18, 124);
+                font-size: 35px;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <a href="{{ url_for('About') }}"><img src="../static/logo.png"></a>
+            <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('artists') }}">Artists</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('searchpage') }}">New Search</a></li>
+            <li><strong><a href="{{ url_for('spotlight') }}">Artist SpotLight</a></strong></li>
+            <li><a href="{{ url_for('playlist') }}">My Playlist</a></li>
+            </ul>
+            </header>
+            
+            <script src="naveffect.js"></script>
+            
+        <br>
+        <br>
+        <div style="text-align: center;">
+            <img  id="imgId" class="round" style="float: middle;" src="../static/spotlight.jpg" width="1000px" height="690px">
+        </div>
+
+        <br>
+        <br>
+        <div class="para">
+            <p style="text-align: center; font-size: 25px;">
+                BTS, the South Korean boy-band, has become the world's biggest boy band, captivating millions of fans worldwide. 
+                The group's seven members, including RM, Jin, Suga, J-Hope, Jimin, V, and Jungkook, have overcome great obstacles 
+                to achieve their success, starting with nothing but each other and a shared love for music. They have shattered 
+                stereotypes, clichés, and records along the way.
+                <br>
+                <br>
+                
+                However, their success has not come without sacrifices. The group has worked incredibly hard to reach their level 
+                of fame, spending countless sleepless nights and enduring a rocky start. Despite their uncertain beginnings, they 
+                have persevered thanks to their passion and the support of their fans, known as ARMY.
+                <br>
+                <br>
+                
+                In the highly competitive k-pop industry, where people are often expected to work like machines, BTS has managed 
+                to maintain their humanity and use their platform to address social issues and positively impact millions of ARMYs'
+                lives.
+                <br>
+                <br>
+                
+                Their musical genius and captivating performances have earned them the admiration of many artists. They have 
+                collaborated with Nicki Minaj, Charlie XCX, Steve Aoki, Lauv, Zara Larsson, Halsey, and many others.
+                <br>
+                <br>
+                
+                BTS's impressive list of accomplishments includes numerous awards such as the Golden Disk Award in 2022, 2021, 
+                and 2020; American Music Award in 2021; Seoul Music Award in 2023, 2022, 2021, and 2020; MAMA Artist Award of the 
+                Year in 2022, 2021, and 2020; Billboard Music Award for Top Duo/Group in 2019, 2020, and 2021; People's Choice 
+                Award in 2022, among many others.
+                <br>
+                <br>
+                
+                However, the group's cohesion has been disrupted as two members have enlisted in compulsory military service in 
+                Korea. While the other five members continue to produce music, the group remains incomplete without all of its 
+                members. ARMYs eagerly await BTS's return as a complete band after their enlistment.
+                <br>
+                <br>
+            </p>
+        </div>
+        
+        <div class="para1">
+            <p>
+                New Album in: 
+            </p>
+            <p id="timer"></p>
+        </div>
+
+        
+        <p style="text-align: center; font-size: 30px; color: #000;">
+            Rate the Artist:
+        </p>
+        
+        <form id="artistform" style="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 25px; color: #000;">
+            <label style="font-size: 30; color: #000;" for="name">Name</label>
+            <input style="font-size: 25px;" type="text" id="name" name="name" required>
+            <label style="font-size: 30; color: #000;" for="name">Review</label>
+            <input style="font-size: 25px;" type="text" id="review" name="review" required><br>
+            <input type="radio" id="rate" name="1" value="1 Star">
+            <label for="html">1 Star</label>
+            <input type="radio" id="rate" name="1" value="2 Stars">
+        <label for="html">2 Stars</label>
+        <input type="radio" id="rate" name="1" value="3 Stars">
+        <label for="html">3 Stars</label>
+        <input type="radio" id="rate" name="1" value="4 Stars">
+        <label for="html">4 Stars</label>
+        <input type="radio" id="rate" name="1" value="5 Stars">
+        <label for="html">5 Stars</label><br><br>
+        <input style="font-size: 25px;" type="submit" value="Submit">
+    </form>
+    
+    <table align="center" id="data" style="text-align: center; font-size: 25px; color: #000;"></table>
+ 
+    <style>
+        footer {
+        text-align: center;
+        padding: 3px;
+        background-color: pink;
+        color: black;
+        }
+    </style>
+    
+        <footer>
+            <p>Author: Ananya and Nishita<br>
+            <a href="mailto:madireddy.ananya@students.iiit.ac.in">madireddy.ananya@students.iiit.ac.in</a><br>
+            <a href="mailto:nishita.kannan@students.iiit.ac.in">nishita.kannan@students.iiit.ac.in</a><br>
+            &copy Euterpe</p>
+            <a href="{{ url_for('about') }}">About</a>
+            <br>
+        </footer>
+        <script src="../static/spotlight.js"></script>
+    </body>
+</html>

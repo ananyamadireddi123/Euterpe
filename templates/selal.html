@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+   
+<head>
+    <link rel="stylesheet" href="../static/albumsheet.css">
+</head>
+
+    <body>
+        <header>
+            <a href="{{ url_for('About') }}"><img src="../static/logo.png"></a>
+            <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('artists') }}">Artists</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('searchpage') }}">New Search</a></li>
+            <li><a href="{{ url_for('spotlight') }}">Artist SpotLight</a></li>
+            <li><a href="{{ url_for('playlist') }}">My Playlist</a></li>
+            </ul>
+            </header>
+            
+            <script src="{{ url_for('static', filename='naveffect.js') }}"></script>
+            
+        
+        <p class="special">Selena Gomez</p>
+
+        <table class="table" cellspacing="40">
+            <tr>
+                <td>
+                    <a href="{{ url_for('rev') }}">
+                    <img src="../static/rev.jpg" style="width: 300px;" style="align-items: center;" class="round">
+                    <div class="middle">
+                        <div class="text">
+<pre> REVIVAL
+7 SONGS
+Released in: 2015</pre>                             
+                        </div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="{{ url_for('raresongs') }}">
+                    <img src="../static/rare.jpg" style="width: 300px;" style="align-items: center;" class="round">
+                    <div class="middle">
+                        <div class="text">
+<pre> RARE 
+7 SONGS
+Released in: 2020</pre>                             
+                        </div>
+                        </div>
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+        <table class="table" cellspacing="40">
+            <tr>
+                <td>
+                    <a href="{{ url_for('sunsongs') }}">
+                    <img src="../static/sun.jpg" style="width: 300px;" style="align-items: center;" class="round">
+                    <div class="middle">
+                        <div class="text">
+<pre> WHEN THE SUN GOES DOWN 
+7 SONGS
+Released in: 2011</pre>                             
+                        </div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="{{ url_for('revalacion') }}">
+                    <img src="../static/Revelación.jpeg" style="width: 300px;" style="align-items: center;" class="round">
+                    <div class="middle">
+                        <div class="text">
+<pre> REVELACION  
+6 SONGS
+Released in: 2021</pre>                             
+                        </div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="{{ url_for('rainsongs') }}">
+                    <img src="../static/rain.jpeg" style="width: 300px;" style="align-items: center;" class="round">
+                    <div class="middle">
+                        <div class="text">
+<pre> A YEAR WITHOUT RAIN 
+7 SONGS
+Released in: 2010</pre>                             
+                        </div>
+                        </div>
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+            
+        <style>
+            footer {
+            text-align: center;
+            padding: 3px;
+            background-color: pink;
+            color: black;
+            }
+        </style>
+    
+        <footer>
+            <p>Author: Ananya and Nishita<br>
+            <a href="mailto:madireddy.ananya@students.iiit.ac.in">madireddy.ananya@students.iiit.ac.in</a><br>
+            <a href="mailto:nishita.kannan@students.iiit.ac.in">nishita.kannan@students.iiit.ac.in</a><br>
+            &copy Euterpe</p>
+            <a href="{{ url_for('about') }}">About</a>
+            <br>
+        </footer>
+    </body>
+</html>

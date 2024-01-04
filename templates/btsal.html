@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../static/albumsheet.css">
+</head>
+
+    <body>
+        <header>
+            <a href="{{ url_for('About') }}"><img src="../static/logo.png"></a>
+            <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('artists') }}">Artists</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('searchpage') }}">New Search</a></li>
+            <li><a href="{{ url_for('spotlight') }}">Artist SpotLight</a></li>
+            <li><a href="{{ url_for('playlist') }}">My Playlist</a></li>
+            </ul>
+            </header>
+            
+            <script src="{{ url_for('static', filename='naveffect.js') }}"></script>
+            
+        
+        <p class="special">BTS</p>
+
+        <table class="table" cellspacing="40">
+            <tr>
+                <td>
+                    <a href="{{ url_for('wingssongs') }}">
+                    <img src="../static/wingssong.jpg" style="width: 300px;" style="align-items: center;" class="round">
+                    <div class="middle">
+                        <div class="text">
+<pre> WINGS 
+7 SONGS
+Released in: 2016</pre>                           
+                        </div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="{{ url_for('mapsongs') }}">
+                    <img src="../static/soul.png" style="width: 300px;" style="align-items: center;" class="round">
+                    <div class="middle">
+                        <div class="text">
+<pre> MAP OF THE SOUL 
+7 SONGS
+Released in: 2020</pre>                             
+                        </div>
+                        </div>
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+        <table class="table" cellspacing="40">
+            <tr>
+                <td>
+                    <a href="{{ url_for('lysongs') }}">
+                    <img src="../static/BTSloveyourself.jpeg" style="width: 300px;" style="align-items: center;" class="round">
+                    <div class="middle">
+                        <div class="text">
+<pre> LOVE YOURSELF 
+7 SONGS
+Released in: 2018</pre>                             
+                        </div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="{{ url_for('dandwsongs') }}">
+                    <img src="../static/dark.jpg" style="width: 300px;" style="align-items: center;" class="round">
+                    <div class="middle">
+                        <div class="text">
+<pre> DARK AND WILD 
+7 SONGS
+Released in: 2014</pre>                             
+                        </div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="{{ url_for('youngsongs') }}">
+                    <img src="../static/young.jpg" style="width: 300px;" style="align-items: center;" class="round">
+                    <div class="middle">
+                        <div class="text">
+<pre>YOUNG FOREVER 
+7 SONGS
+Released in: 2016</pre>                             
+                        </div>
+                        </div>
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+            
+        </style>
+            
+        <style>
+            footer {
+            text-align: center;
+            padding: 3px;
+            background-color: pink;
+            color: black;
+            }
+        </style>
+    
+        <footer>
+            <p>Author: Ananya and Nishita<br>
+            <a href="mailto:madireddy.ananya@students.iiit.ac.in">madireddy.ananya@students.iiit.ac.in</a><br>
+            <a href="mailto:nishita.kannan@students.iiit.ac.in">nishita.kannan@students.iiit.ac.in</a><br>
+            &copy Euterpe</p>
+            <a href="{{ url_for('about') }}">About</a>
+            <br>
+        </footer>
+    </body>
+</html>
